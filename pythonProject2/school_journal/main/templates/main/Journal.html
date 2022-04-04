@@ -5,13 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-    {% for el in school_journal %}
-        <div class="alert alert-warning">
+<table border="2", align="center">
+    <tr>
+        {% for el in school_journal %}
+         <div class="alert alert-warning" align="center">
             <h3>{{el.title}}</h3>
-            {% for v in el.class_students.all %}
-                <h5>{{v.firs_name}}</h5>
-            {% endfor %}
-        </div>
-    {% endfor %}
+             {% for i in el.subject.all %}
+             <th>{{i.title}}</th>
+                <tr>
+                {% for v in el.class_students.all %}
+                <td>{{v.firs_name}}</td>
+                     <tr>
+                        <td>{{el.grade}}</td>
+                        <td>{{el.grade}}</td>
+                        <td>{{el.grade}}</td>
+                        <td>{{el.grade}}</td>
+    <tr>
+                {% endfor %}
+
+                </tr>
+             {% endfor %}
+        {% endfor %}
+    </tr>
+</table>
 </body>
 </html>

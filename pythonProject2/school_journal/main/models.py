@@ -27,7 +27,6 @@ class Teacher(models.Model):
         return "Учитель: {} {}".format(self.first_name, self.last_name)
 
 
-
 class Journal(models.Model):
 
     title = models.CharField(max_length=10, )
