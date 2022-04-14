@@ -29,7 +29,7 @@ class Teacher(models.Model):
 
 class Journal(models.Model):
 
-    title = models.CharField(max_length=10, )
+    title = models.CharField(max_length=10)
     subject = models.ManyToManyField(SchoolSubject, verbose_name="Предметы")
     grade = models.IntegerField(blank=True, verbose_name="Оценка")
     date = models.DateField(verbose_name="Дата провидения занятия")

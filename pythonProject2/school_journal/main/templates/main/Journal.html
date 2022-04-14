@@ -5,27 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-<table border="2", align="center">
+<table border="2", align="center", width="40%">
     <tr>
         {% for el in school_journal %}
          <div class="alert alert-warning" align="center">
             <h3>{{el.title}}</h3>
              {% for i in el.subject.all %}
              <th>{{i.title}}</th>
-                <tr>
+                        <td>{{el.date}}</td>
+                        <td>{{el.date}}</td>
+                        <td>{{el.date}}</td>
+                        <td>{{el.date}}</td>
                 {% for v in el.class_students.all %}
-                <td>{{v.firs_name}}</td>
-                     <tr>
+             <tr>
+                        <td>{{v.firs_name}}</td>
                         <td>{{el.grade}}</td>
                         <td>{{el.grade}}</td>
                         <td>{{el.grade}}</td>
                         <td>{{el.grade}}</td>
-    <tr>
+            <tr>
                 {% endfor %}
 
-                </tr>
+    </tr>
              {% endfor %}
         {% endfor %}
+    <div/>
     </tr>
 </table>
 </body>
